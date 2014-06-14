@@ -24,7 +24,8 @@ require.config({
 
 require([
     'backbone',
-], function (Backbone) {
+    'router'
+], function (Backbone, router) {
+    new router();
     Backbone.history.start();
-    console.log('Hello from Backbone!');
 });

@@ -3,8 +3,9 @@
 require([
   "jquery",
   "underscore",
-  "handlebars"
-], function($, _, handlebars) {
+  "handlebars",
+  "text!templates/app-view.html"
+], function($, _, handlebars, appTemplate) {
 
   var AppView = new Backbone.View.extend({
 
@@ -17,7 +18,7 @@ require([
     },
 
     render: function() {
-
+      return this;
     }
 
   });
