@@ -1,7 +1,24 @@
 var express     = require("express"),
     bodyParser  = require("body-parser"),
     serveStatic = require("serve-static"),
-    multer      = require("multer");
+    multer      = require("multer"),
+    mysql       = require("mysql");
+
+/**
+ * Connect to mysql server
+ */
+
+var conn = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'root'
+});
+
+conn.connect();
+
+/**
+ * Create express application
+ */
 
 var app = express();
 
