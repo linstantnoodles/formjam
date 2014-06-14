@@ -1,10 +1,11 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery"
-], function($) {
+], function(Backbone, $) {
 
-  var FormModel = new Backbone.Model.extend({
+  var FormModel = Backbone.Model.extend({
 
     defaults: {
       "img_uri": "http://i1103.photobucket.com/albums/g468/xionnn/jackie-chan-meme1.jpg"

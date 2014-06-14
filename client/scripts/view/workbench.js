@@ -1,11 +1,12 @@
 "use strict"
 
 define([
+  "backbone",
   "jquery",
   "underscore",
   "handlebars",
   "text!template/workbench.html"
-], function($, _, handlebars, workbenchTemplate) {
+], function(Backbone, $, _, handlebars, workbenchTemplate) {
 
   var WorkbenchView = Backbone.View.extend({
 

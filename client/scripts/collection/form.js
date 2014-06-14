@@ -1,11 +1,12 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery",
   "model/form"
 ], function($, formModel) {
 
-  var FormCollection = new Backbone.Collection.extend({
+  var FormCollection = Backbone.Collection.extend({
 
     model: formModel,
 

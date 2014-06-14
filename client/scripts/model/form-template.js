@@ -1,10 +1,11 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery"
-], function($) {
+], function(Backbone, $) {
 
-  var FormTemplateModel = new Backbone.Model.extend({
+  var FormTemplateModel = Backbone.Model.extend({
 
     defaults: {
       "title": "Untitled"

@@ -1,11 +1,12 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery",
   "model/form-template"
-], function($, formTemplateModel) {
+], function(Backbone, $, formTemplateModel) {
 
-  var FormTemplateCollection = new Backbone.Collection.extend({
+  var FormTemplateCollection = Backbone.Collection.extend({
 
     model: formTemplateModel,
 

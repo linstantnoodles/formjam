@@ -1,12 +1,13 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery",
   "underscore",
   "handlebars"
-], function($, _, handlebars) {
+], function(Backbone, $, _, handlebars) {
 
-  var FormListView = new Backbone.View.extend({
+  var FormListView = Backbone.View.extend({
 
     initialize: function() {
 
