@@ -1,8 +1,9 @@
 "use strict";
 
 define([
-  "views/app"
-], function(appView) {
+  "backbone",
+  "view/app"
+], function(Backbone, appView) {
 
   var AppRouter = Backbone.Router.extend({
 
@@ -14,5 +15,8 @@ define([
       new appView().render();
     }
 
+  });
+
+  return AppRouter;
 });
 

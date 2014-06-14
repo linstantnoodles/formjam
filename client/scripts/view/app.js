@@ -1,11 +1,12 @@
 "use strict"
 
 require([
+  "backbone",
   "jquery",
   "underscore",
   "handlebars",
   "text!templates/app-view.html"
-], function($, _, handlebars, appTemplate) {
+], function(Backbone, $, _, handlebars, appTemplate) {
 
   var AppView = new Backbone.View.extend({
 
