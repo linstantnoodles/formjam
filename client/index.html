@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -21,23 +22,66 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div id="primary-nav" class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Form Jam</a>
+            </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Create Form</a></li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username  <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Workbench</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+    <div id="main-content" class="wrapper">
+        <div class="row">
+            <div id="left" class=" col-xs-5 cl-sm-4 col-md-3 col-lg-3">
+                <!-- form-template-sidebar -->
+            </div>
+            <div id="right" class=" col-xs-7 col-sm-8 col-md-9 col-lg-9">
+                <!-- workbench-sidebar -->
+            </div>
+        </div><!-- .row end -->
+    </div><!--wrapper end-->
+    <footer>
+        <div class="container">
+            <div class="description">
+                <h3>About</h3>
+                <p>Form Jam is An application that parses the data from handwritten forms. Stack: Backbone.js, Node, mysql, OpenCV, Python Scikit, Bootrstrap</p>
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>jQuery</li>
-            <li>Backbone.js</li>
-            <li>Underscore.js</li>
-            <li>Modernizr</li>
-            <li>RequireJS</li>
-          </ul>
+            <p>2014 Masshack summission. </p>           
         </div>
-
-
-
+        <div class="team">
+            <h3>Team<h3>
+                    <ul class="team">
+                        <li><img src="https://lh6.googleusercontent.com/-4it08cb4xR0/AAAAAAAAAAI/AAAAAAAAABo/VGTCH4ZA4r8/s120-c/photo.jpg"><a href="#">Chris Marciniak</a></li>
+                        <li><img src="https://lh5.googleusercontent.com/-XvZYTNueDPQ/AAAAAAAAAAI/AAAAAAAAAHQ/0Bh1ntxHWKc/s120-c/photo.jpg"><a href="#">Alan Lin</a></li>
+                        <li><img src="https://lh5.googleusercontent.com/-UxBq0wF2y-c/AAAAAAAAAAI/AAAAAAAABO0/0N8HGyoI_Zc/s120-c/photo.jpg"><a href="#">David Casinghino</a></li>
+                        <li><img src="https://avatars1.githubusercontent.com/u/3619720?s=400"><a href="#">Mohamed Ali</a></li>
+                    </ul>
+                </div>
+                </footer>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -12,6 +12,12 @@ require.config({
                 'jquery'
             ],
             exports: 'Backbone'
+        },
+        handlebars: {
+          exports: "Handlebars"
+        },
+        bootstrap: {
+          deps: ["jquery"]
         }
     },
     paths: {
@@ -19,13 +25,14 @@ require.config({
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
         handlebars: '../bower_components/handlebars/handlebars',
-        text: "../bower_components/requirejs-text/text"
+        text: "../bower_components/requirejs-text/text",
+        bootstrap: "../bower_components/bootstrap/dist/js/bootstrap"
     }
 });
 
 require([
-    'backbone',
-    'router/router'
+  'backbone',
+  'router/router'
 ], function (Backbone, router) {
     new router();
     Backbone.history.start();

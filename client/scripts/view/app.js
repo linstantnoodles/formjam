@@ -1,17 +1,21 @@
 "use strict"
 
-require([
+define([
   "backbone",
   "jquery",
   "underscore",
   "handlebars",
-  "text!templates/app-view.html"
-], function(Backbone, $, _, handlebars, appTemplate) {
+  "view/form-template-sidebar",
+  "view/workbench"
+], function(Backbone, $, _, handlebars,
+  formTemplateSidebarView, workbenchView) {
 
-  var AppView = new Backbone.View.extend({
+  var AppView = Backbone.View.extend({
+
+    el: "#main-content",
 
     initialize: function() {
-
+      // nothing
     },
 
     events: {
@@ -19,6 +23,8 @@ require([
     },
 
     render: function() {
+      new formTemplateSidebarView().render();
+      new workbenchView().render();
       return this;
     }
 

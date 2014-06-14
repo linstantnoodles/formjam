@@ -1,12 +1,17 @@
 "use strict"
 
-require([
+define([
   "jquery",
   "underscore",
-  "handlebars"
-], function($, _, handlebars) {
+  "handlebars",
+  "text!template/workbench.html"
+], function($, _, handlebars, workbenchTemplate) {
 
-  var WorkbenchView = new Backbone.View.extend({
+  var WorkbenchView = Backbone.View.extend({
+
+    el: "#right",
+
+    template: handlebars.compile(workbenchTemplate),
 
     initialize: function() {
 
@@ -17,7 +22,8 @@ require([
     },
 
     render: function() {
-
+      this.$el.html(this.template());
+      return this;
     }
 
   });

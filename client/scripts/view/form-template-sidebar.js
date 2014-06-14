@@ -1,12 +1,18 @@
 "use strict"
 
-require([
+define([
+  "backbone",
   "jquery",
   "underscore",
-  "handlebars"
-], function($, _, handlebars) {
+  "handlebars",
+  "text!template/form-template-sidebar.html"
+], function(Backbone, $, _, handlebars, formTemplateSidebarTemplate) {
 
-  var FormTemplateSidebarView = new Backbone.View.extend({
+  var FormTemplateSidebarView = Backbone.View.extend({
+
+    el: "#left",
+
+    template: handlebars.compile(formTemplateSidebarTemplate),
 
     initialize: function() {
 
@@ -17,7 +23,8 @@ require([
     },
 
     render: function() {
-
+      this.$el.html(this.template());
+      return this;
     }
 
   });
