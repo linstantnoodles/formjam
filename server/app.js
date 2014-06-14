@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 // Set static file directory
-app.use(serveStatic(__dirname + "/client"));
+app.use(serveStatic("../client"));
 
 // Get forms of template
 // Upload image for template
@@ -21,5 +21,4 @@ app.use(serveStatic(__dirname + "/client"));
 console.log("Listening to port: " + app.get('port'));
 
 app.listen(app.get('port'));
-
 
