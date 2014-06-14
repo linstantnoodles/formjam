@@ -1,0 +1,9 @@
+{
+  "dev": {
+    "host": "localhost",
+    "driver": "mysql",
+    "database": "formjam"
+    "user": "root",
+    "password": "root"
+  },
+}
