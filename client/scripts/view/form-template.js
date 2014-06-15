@@ -24,6 +24,9 @@ define([
         var json = JSON.parse(config);
         var fields = json.fields;
         var keys = Object.keys(fields);
+        if (keys.length < 1) {
+          return new handlebars.SafeString("<p>No fields exist!</p>");
+        }
         var results = "";
         for (var i = 0; i < keys.length; i++) {
           var labelName = keys[i];
