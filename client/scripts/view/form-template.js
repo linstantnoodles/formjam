@@ -19,6 +19,20 @@ define([
       "click .upload": "uploadFormImage"
     },
 
+    initialize: function() {
+      handlebars.registerHelper('genForm', function(config) {
+        var json = JSON.parse(config);
+        var fields = json.fields;
+        var keys = Object.keys(fields);
+        var results = "";
+        for (var i = 0; i < keys.length; i++) {
+          var labelName = keys[i];
+          results += "<label>" + labelName + "</label>" + "<input type='text' name='val'/>";
+        }
+        return new handlebars.SafeString(results);
+      });
+    },
+
     postInit: function() {
       var templateId = this.model.get("id");
       $("#my-awesome-dropzone").dropzone({
@@ -34,6 +48,7 @@ define([
     },
 
     render: function() {
+      console.log(this.model.attributes);
       this.$el.html(this.template(this.model.attributes));
       this.postInit();
       return this;
