@@ -40,3 +40,6 @@ app/bower_components
 ### Yeoman ###
 dist
 test/temp
+
+### Uploaded files ###
+server/form-images

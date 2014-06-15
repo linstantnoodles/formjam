@@ -26,7 +26,8 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         handlebars: '../bower_components/handlebars/handlebars',
         text: "../bower_components/requirejs-text/text",
-        bootstrap: "../bower_components/bootstrap/dist/js/bootstrap"
+        bootstrap: "../bower_components/bootstrap/dist/js/bootstrap",
+        dropzone: "../bower_components/dropzone/downloads/dropzone-amd-module"
     }
 });
 

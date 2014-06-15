@@ -31,7 +31,14 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.use(multer({dest: './form-images'}));
+app.use(multer({
+
+  dest: './form-images',
+
+  rename: function (fieldname, filename) {
+    return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+  }
+}));
 
 /**
  * Set static file directory
@@ -52,14 +59,29 @@ app.get("/template/:id/forms", function(req, res) {
  */
 
 app.post("/form/:id/upload", function(req, res) {
-  console.log(req.body);
-  console.log(req.files);
+  var id = req.params.id;
+  var path = req.files.file.path;
+  // Ideally from python script
+  var content = {};
+  content = JSON.stringify(content);
+
+  conn.query('INSERT INTO form SET ?, date_submitted=NOW()', {
+    content: content,
+    image_uri: path,
+    template_id: id
+  }, function(err, result) {
+    if (err) {
+      res.json(400, {msg: 'Signup failed'});
+      return;
+    }
+    res.json(200, {msg: 'win'});
+  });
 });
 
 app.post("/templates", function(req, res) {
-  console.log(req.body.title);
   var title = req.body.title || "Untitled";
   var config = JSON.stringify(req.body.config);
+
   conn.query('INSERT INTO template SET ?', {
     title: title,
     config: config
