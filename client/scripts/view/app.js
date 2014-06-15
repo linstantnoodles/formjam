@@ -24,8 +24,13 @@ define([
       "click .left-sidebar a": "openTemplatePreview"
     },
 
+    currentBuilder: null,
+
     openFormBuilder: function() {
-      new formBuilderView({model: new formTemplateModel()}).render();
+      if (this.currentBuilder) {
+        this.curentBuilder.remove();
+      }
+      this.currentBuilder = new formBuilderView({model: new formTemplateModel()}).render();
     },
 
     openTemplatePreview: function(e) {
@@ -44,7 +49,7 @@ define([
       new formTemplateSidebarView({
         collection: this.templateList
       }).render();
-      new formBuilderView({model: new formTemplateModel()}).render();
+      this.currentBuilder = new formBuilderView({model: new formTemplateModel()}).render();
       return this;
     }
 
