@@ -2,19 +2,15 @@
     <div class="title">
         <h2>Workbench</h2>
     </div>
-    <div id ="create" class="container">
+    <div id ="create">
         <div class="row">
-            <div class="col-md-2">
+            <div id="upload" class="col-md-8 offset-md-1">
                 <h3>{{title}}</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class=" col-xs-7 col-md-9 col-lg-9">
                 <form action="/file-upload"
                     class="dropzone"
                     id="my-awesome-dropzone"></form>
             </div>
-            <div class="col-md-2 col-md-offset-5">
+            <div class="col-md-3">
             <h3>Form preview</h3>
                 <!-- excel spreadsheet -->
                 {{genForm config}}

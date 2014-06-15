@@ -60,7 +60,6 @@ define([
         that.model.saveInputField(val);
       });
       this.model.set("title", title);
-      console.log(this.model.attributes)
       this.model.save();
     },
 
