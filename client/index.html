@@ -16,6 +16,7 @@
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src =""></script>
         <!-- endbuild -->
     </head>
     <body id="app">
@@ -25,20 +26,22 @@
     <header id="nav">
     </header>
     <div id="main-content" class="wrapper">
-        <div class="row">
-            <div class="container">
-                <div id="left" class=" col-xs-5 cl-sm-4 col-md-3 col-lg-3">
+        <div class="container">
+            <div class="row">
+            
+                <div id="left" class=" col-xs-12 col-sm-4 col-lg-3">
                     <!-- form-template-sidebar -->
                 </div>
-                <div id="right" class=" col-xs-7 col-sm-8 col-md-9 col-lg-9">
+                <div id="right" class=" col-xs-12 col-sm-8 col-lg-9">
                         <!-- workbench-sidebar -->
-                    <div class="workbench box">
-                    </div><!-- .workbench end-->
+                     <div class="workbench box">
+                    </div> <!-- .workbench end
                 </div>
-            </div>    
-        </div><!-- .row end -->
+            </div><!-- .row end -->
+        </div>
     </div><!--wrapper end-->
-    <footer>
+</div>
+<footer class="col-xs-12">
         <div class="container">
             <div class=" col-xs-5 cl-sm-4 col-md-3 col-lg-3">
                     <div class="description">
@@ -46,7 +49,7 @@
                         <p>Form Jam is an application that parses data from handwritten forms.</p> <p>Stack: Backbone.js, Node, mysql, OpenCV, Python Scikit, Bootrstrap</p><p>2014 Masshack summission. </p>
                     </div>          
                 </div>
-                <div class=" col-xs-7 cl-sm-8 col-md-9 col-lg-9">
+                <div class="col-xs-7 cl-sm-8 col-md-9 col-lg-9">
                     <div class="team">
                         <h3>Team</h3>
                         <ul class="team">
@@ -58,7 +61,7 @@
                     </div>
                 </div>
             </div>
-    </footer>
+    </footer>    
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
