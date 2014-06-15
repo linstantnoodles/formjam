@@ -10,11 +10,11 @@ color: #19763e;
 text-decoration: none;
 }
 
-.primary-navbar { border-top: #53bf6b 4px solid; opacity: .7;}
-.navbar-brand, .navbar-brand:hover { border-top: #53bf6b 4px solid; background: #53bf6b !important; color: white !important; z-index: 9; }
+.primary-navbar { border-top: #53bf6b 4px solid; }
+.navbar-brand, .navbar-brand:hover { border-top: #53bf6b 4px solid; background: #53bf6b !important; color: white !important; z-index: 9; text-transform: uppercase; }
 
 #main-content { padding-top: 64px; }
-.title { padding: .5em; text-align: center; }
+.title { padding: .5em; text-align: center; background: #666; color: white; text-transform: uppercase;}
 #primary-nav::before { height: 0px; z-index:  }
 .box { border: 2px #c0c0c0; background: white; }
 
