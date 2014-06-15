@@ -1,0 +1,31 @@
+<div id ="create" class="container">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+
+            <h3>Saved Form title</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-xs-7 col-sm-8 col-md-9 col-lg-9">
+            <form action="upload_file.php" method="post"
+                enctype="multipart/form-data">
+                <div class="row col-lg-9">
+                    <div class="button upload button col-md-2 col-lg-3" onclick="document.getElementById('file').click();"  for="file">Upload:</div>
+                </div>
+                <div class="row col-lg-9 off-set-5">
+                    <div id="upload-wrap">
+                        <input type="file" name="file" id="file"><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <input class="button col-md-2 col-lg-3" type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+        </div>	
+        <div class="col-md-2 col-md-offset-5">
+            <!-- excel spreadsheet -->
+        </div>
+    </div>
+    <a class="button" href="#">Save</a>
+</div>
+
