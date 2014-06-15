@@ -6,11 +6,10 @@ define([
   "underscore",
   "handlebars",
   "view/form-template-sidebar",
-  "view/workbench",
   "view/nav",
   "view/form-builder"
 ], function(Backbone, $, _, handlebars,
-  formTemplateSidebarView, workbenchView, navView, formBuilderView) {
+  formTemplateSidebarView, navView, formBuilderView) {
 
   var AppView = Backbone.View.extend({
 
