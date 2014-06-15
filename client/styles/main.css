@@ -160,7 +160,9 @@ width: 88px;
 	display: block;
 	clear: none;
 }
-
+.add-field {
+margin-top: 20px;
+}
 .form-control:focus {
 border-color: #36BA55;
 outline: 0;
