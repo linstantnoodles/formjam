@@ -4,12 +4,15 @@
 
 body { background: url(../images/extra_clean_paper.png)repeat;font-weight: 400; color: #777777; font-family: 'Open Sans', sans-serif; }
 
+.struggle-illustration { background: url(../images/application.jpg) no-repeat; width: 300px; height: 260px; }
+
 .navbar-nav:active { background: transparent;}
 h2 a:link, h2 a:visited {
 color: #19763e;
 text-decoration: none;
 }
 
+.pitch { background: rgba(255, 255, 255, 0.7); margin-left: 50%; margin-bottom: 100px; padding: 20px;}
 .navbar-default { border-top: #53bf6b 4px solid; }
 .navbar-brand, .navbar-brand:hover { border-top: #53bf6b 4px solid; background: #53bf6b !important; color: white !important; z-index: 9; text-transform: uppercase; }
 
@@ -155,6 +158,7 @@ position: absolute;
 top: 12px;
 left: 475px;
 width: auto;
+border-radius: 0px;
 }
 
 .save-form {
