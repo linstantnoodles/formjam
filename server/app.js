@@ -10,6 +10,7 @@ var express     = require("express"),
 
 var conn = mysql.createConnection({
   host: 'localhost',
+  database: 'formjam',
   user: 'root',
   password: 'root'
 });
