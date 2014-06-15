@@ -15,6 +15,9 @@ define([
     template: handlebars.compile(formTemplateSidebarTemplate),
 
     initialize: function() {
+    },
+
+    openTemplatePreview: function() {
 
     },
 
