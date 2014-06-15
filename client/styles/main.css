@@ -154,6 +154,12 @@ left: 475px;
 width: 88px;
 }
 
+.save-form {
+	display: block;
+	clear: none;
+	margin-left: 180%;
+}
+
 .form-control:focus {
 border-color: #36BA55;
 outline: 0;
