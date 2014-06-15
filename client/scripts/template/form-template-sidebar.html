@@ -3,11 +3,8 @@
         <h2>Forms</h2>
     </div>
     <ul class="forms-list">
-        <!-- yield -->
-        <li><a href="">This is my frist form</a></li>
-        <li><a href="">And a second form</a></li>
-        <li><a href="">Third form!</a></li>
-        <li><a href="">Fourth form, why not</a></li>
-        <li><a href="">fifth form is ready.</a></li>
+    {{#each templates}}
+    <li><a href="" data-id={{id}}>{{title}}</a></li>
+    {{/each}}
     </ul>
 </div><!-- .left-sidebar end--> 

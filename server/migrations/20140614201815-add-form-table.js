@@ -5,7 +5,8 @@ exports.up = function(db, callback) {
   db.createTable("form", {
     id: {
       type: "int",
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     date_submitted: "datetime",
     content: "string",

@@ -15,18 +15,18 @@ define([
     template: handlebars.compile(formTemplateSidebarTemplate),
 
     initialize: function() {
-    },
-
-    openTemplatePreview: function() {
-
-    },
-
-    events: {
-
+      this.listenTo(this.collection, "reset", this.render);
+      this.collection.fetch({reset: true});
     },
 
     render: function() {
-      this.$el.html(this.template());
+      var models = this.collection.models;
+      var templates = _.map(models, function(model) {
+        return model.attributes;
+      });
+      this.$el.html(this.template({
+        templates: templates
+      }));
       return this;
     }
 

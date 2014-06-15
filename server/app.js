@@ -57,9 +57,29 @@ app.post("/form/:id/upload", function(req, res) {
 });
 
 app.post("/templates", function(req, res) {
-  console.log(req.body.config);
-  console.log("got yo fucking post");
+  var config = JSON.stringify(req.body.config);
+  conn.query('INSERT INTO template SET ?', {
+    title: 'wtf',
+    config: config
+  }, function(err, result) {
+    if (err) {
+      res.json(400, {msg: 'Signup failed'});
+      return;
+    }
+    res.json(200, {msg: 'win'});
+  });
 });
+
+app.get("/templates", function(req, res) {
+  conn.query('SELECT * FROM template', function(err, results) {
+    if (err) {
+      res.json(400, {msg: 'Signup failed'});
+      return;
+    }
+    res.json(200, results);
+  });
+});
+
 
 console.log("Listening to port: " + app.get('port'));
 app.listen(app.get('port'));

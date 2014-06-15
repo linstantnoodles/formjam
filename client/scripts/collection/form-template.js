@@ -1,6 +1,6 @@
 "use strict"
 
-require([
+define([
   "backbone",
   "jquery",
   "model/form-template"

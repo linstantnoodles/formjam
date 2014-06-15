@@ -9,10 +9,11 @@ define([
   "view/nav",
   "view/form-builder",
   "view/form-template",
-  "model/form-template"
+  "model/form-template",
+  "collection/form-template"
 ], function(Backbone, $, _, handlebars,
   formTemplateSidebarView, navView, formBuilderView,
-  formTemplateView, formTemplateModel) {
+  formTemplateView, formTemplateModel, formTemplateCollection) {
 
   var AppView = Backbone.View.extend({
 
@@ -24,18 +25,20 @@ define([
     },
 
     openFormBuilder: function() {
-      new formBuilderView({"model": new formTemplateModel()}).render();
+      new formBuilderView({model: new formTemplateModel()}).render();
     },
 
     openTemplatePreview: function(e) {
       e.preventDefault();
       // Do a search for the right model
-      new formTemplateView({"model": new formTemplateModel()}).render();
+      new formTemplateView({model: new formTemplateModel()}).render();
     },
 
     render: function() {
       new navView().render();
-      new formTemplateSidebarView().render();
+      new formTemplateSidebarView({
+        collection: new formTemplateCollection()
+      }).render();
       return this;
     }
 

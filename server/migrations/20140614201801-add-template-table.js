@@ -5,7 +5,8 @@ exports.up = function(db, callback) {
   db.createTable("template", {
     id: {
       type: "int",
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     title: "string",
     config: "string",
