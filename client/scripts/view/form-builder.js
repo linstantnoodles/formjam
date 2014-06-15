@@ -41,7 +41,9 @@ define([
 
     addInputField: function() {
       var $fields = this.$(".fields");
-      var newField = new inputElementView().render().el;
+      var newField = new inputElementView({
+        model: this.model
+      }).render().el;
       $fields.append(newField);
     },
 
@@ -50,7 +52,7 @@ define([
      */
 
     saveForm: function() {
-      alert("saving");
+      this.model.save();
     },
 
     render: function() {

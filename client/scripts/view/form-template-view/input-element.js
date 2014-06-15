@@ -27,6 +27,8 @@ define([
     saveInputField: function(e) {
       var $input = this.$("input[type=text]");
       var fieldName = $input.val();
+      // Save to model
+      this.model.saveInputField(fieldName);
       // Remove save button
       this.$(".save-field").remove();
       // Update label

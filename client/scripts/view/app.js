@@ -7,9 +7,10 @@ define([
   "handlebars",
   "view/form-template-sidebar",
   "view/nav",
-  "view/form-builder"
+  "view/form-builder",
+  "model/form-template"
 ], function(Backbone, $, _, handlebars,
-  formTemplateSidebarView, navView, formBuilderView) {
+  formTemplateSidebarView, navView, formBuilderView, formTemplateModel) {
 
   var AppView = Backbone.View.extend({
 
@@ -20,7 +21,7 @@ define([
     },
 
     openFormBuilder: function() {
-      new formBuilderView().render();
+      new formBuilderView({"model": new formTemplateModel()}).render();
     },
 
     render: function() {
