@@ -23,7 +23,7 @@ text-decoration: none;
 	min-height: 600px;
 	margin-top: 20px;
 }
-.button, input[type=submit], .search { 
+.button, input[type=submit] { 
 	padding: 12px 20px 12px 20px;
 font-size: 11px;
 font-weight: 600;
@@ -51,8 +51,8 @@ line-height: 0px;
 }
 
 
-a.button:hover, input[type=submit]:hover input#file:hover, input#file:focus
-a.button:focus, input[type=submit]:focus {
+.button:hover, .button:focus, a.button:hover, input#file:hover, input#file:focus
+a.button:focus {
 	color: #FFF !important;
 	padding: 12px 50px 12px 20px;
 	background-color: #53bf6b;
@@ -68,12 +68,12 @@ box-shadow: inset 0 0 0 0 #CCC;
 
 
 /* Links  */
-a:link, a:visited, input[type=submit], input#file .search:link, .search:visited {
+a:link, a:visited, .button:link .button:visited input[type=submit], input#file {
 color: #3fa757;
 }
 
 
-a.button:link, input[type=submit]:link, input#file:link .search:link {
+a.button:link, input[type=submit]:link, input#file:link  {
 text-decoration: none;
 }
 
@@ -154,7 +154,7 @@ div#upload-wrap {
 position: absolute;
 top: 12px;
 left: 475px;
-width: 88px;
+width: auto;
 }
 
 .save-form {
