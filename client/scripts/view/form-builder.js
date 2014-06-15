@@ -19,8 +19,6 @@ define([
 
   var FormBuilderView = Backbone.View.extend({
 
-    el: "#right",
-
     /**
      * Main template
      */

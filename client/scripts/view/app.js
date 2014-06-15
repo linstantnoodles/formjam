@@ -28,9 +28,10 @@ define([
 
     openFormBuilder: function() {
       if (this.currentBuilder) {
-        this.curentBuilder.remove();
+        this.currentBuilder.remove();
       }
-      this.currentBuilder = new formBuilderView({model: new formTemplateModel()}).render();
+      this.currentBuilder = new formBuilderView({model: new formTemplateModel()});
+      this.$("#right").html(this.currentBuilder.render().el);
     },
 
     openTemplatePreview: function(e) {
@@ -49,7 +50,9 @@ define([
       new formTemplateSidebarView({
         collection: this.templateList
       }).render();
-      this.currentBuilder = new formBuilderView({model: new formTemplateModel()}).render();
+      this.currentBuilder = new formBuilderView({model: new formTemplateModel()});
+      this.$("#right").html(this.currentBuilder.render().el);
+
       return this;
     }
 
