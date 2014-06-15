@@ -57,9 +57,10 @@ app.post("/form/:id/upload", function(req, res) {
 });
 
 app.post("/templates", function(req, res) {
+  var title = req.body.title || "Untitled";
   var config = JSON.stringify(req.body.config);
   conn.query('INSERT INTO template SET ?', {
-    title: 'wtf',
+    title: title,
     config: config
   }, function(err, result) {
     if (err) {
