@@ -4,19 +4,13 @@
 
 body { background: url(../images/extra_clean_paper.png)repeat;font-weight: 400; color: #777777; font-family: 'Open Sans', sans-serif; }
 
-
+.navbar-nav:active { background: transparent;}
 h2 a:link, h2 a:visited {
 color: #19763e;
 text-decoration: none;
 }
-#left{
-	margin-left: 5px;
-}
-#right
-{
-	margin-left: -10px;
-}
-.navbar { border-top: #53bf6b 4px solid; opacity: .7;}
+
+.primary-navbar { border-top: #53bf6b 4px solid; opacity: .7;}
 .navbar-brand, .navbar-brand:hover { border-top: #53bf6b 4px solid; background: #53bf6b !important; color: white !important; z-index: 9; }
 
 #main-content { padding-top: 64px; }
@@ -24,9 +18,12 @@ text-decoration: none;
 #primary-nav::before { height: 0px; z-index:  }
 .box { border: 2px #c0c0c0; background: white; }
 
-.left-sidebar {  height: 600px; }
-.workbench { min-height: 600px; }
-.button, input[type=submit], input#file { 
+.left-sidebar {  height: 300px; }
+.workbench { 
+	min-height: 600px;
+	margin-top: 20px;
+}
+.button, input[type=submit], .search { 
 	padding: 12px 20px 12px 20px;
 font-size: 11px;
 font-weight: 600;
@@ -55,7 +52,7 @@ line-height: 0px;
 
 
 a.button:hover, input[type=submit]:hover input#file:hover, input#file:focus
-a.button:focus, input[type=submit]:focus ,input#file  {
+a.button:focus, input[type=submit]:focus ,input#file .search {
 	color: #FFF !important;
 	padding: 12px 50px 12px 20px;
 	background-color: #53bf6b;
@@ -76,7 +73,7 @@ color: #3fa757;
 }
 
 
-a.button:link, input[type=submit], input#file {
+a.button:link, input[type=submit], input#file .search {
 text-decoration: none;
 }
 
@@ -148,4 +145,27 @@ ul.team li a {
 
 div#upload-wrap {
 	display: none;
+}
+
+.search {
+position: absolute;
+top: 12px;
+left: 475px;
+}
+
+.form-control:focus {
+border-color: #36BA55;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px #5EF281,0 0 8px #24BF48);
+box-shadow: inset 0 1px 1px #5EF281,0 0 8px #24BF48;
+}
+
+
+
+
+@media (min-width: 750px) {
+.workbench { 
+	margin-top: 0px;
+}
+.left-sidebar { height: 600px; }
 }
