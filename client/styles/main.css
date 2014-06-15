@@ -111,7 +111,7 @@ footer  {
 	width: 100%;
 	padding-top: 6px;
 	margin-top: 40px;
-	background-color: rgba(81,81,81,0.7);
+	background-color: rgba(43, 42, 42, 0.5)
 }
 
 footer .description p {
@@ -125,7 +125,8 @@ footer .description p {
 
 ul.team img {
  width: 50px;
- height: autho;
+ float: left;
+ height: auto;
  margin: 0 .5em .5em 0;
 }
 
@@ -171,12 +172,27 @@ box-shadow: inset 0 1px 1px #5EF281,0 0 8px #24BF48;
 }
 
 
+.team-photo {
+width: 350px;
+}
+.team-name a {
+font-size: 16px;
+display: inline;
+clear: none;
+}
 
+.team { padding: 0px;}
+#team {
+	display: none;
+}
 
 @media (min-width: 750px) {
 .workbench { 
 	margin-top: 0px;
 }
 .left-sidebar { height: 600px; }
+
+#team { width: 400px; display: block; margin: 0 0 0 100px;
+padding: 0px;}
 }
 
