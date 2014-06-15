@@ -155,6 +155,7 @@ position: absolute;
 top: 12px;
 left: 475px;
 width: auto;
+border-radius: 0px;
 }
 
 .save-form {
