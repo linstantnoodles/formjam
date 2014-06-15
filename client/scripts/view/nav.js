@@ -5,17 +5,19 @@ define([
   "jquery",
   "underscore",
   "handlebars",
-  "text!template/workbench.html"
+  "text!template/nav.html"
 ], function(Backbone, $, _, handlebars, workbenchTemplate) {
 
   var WorkbenchView = Backbone.View.extend({
 
-    el: "#right",
+    el: "#nav",
 
     template: handlebars.compile(workbenchTemplate),
 
     initialize: function() {
+    },
 
+    openFormBuilder: function() {
     },
 
     events: {

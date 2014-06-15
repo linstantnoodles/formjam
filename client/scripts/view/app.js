@@ -6,25 +6,27 @@ define([
   "underscore",
   "handlebars",
   "view/form-template-sidebar",
-  "view/workbench"
+  "view/workbench",
+  "view/nav",
+  "view/form-builder"
 ], function(Backbone, $, _, handlebars,
-  formTemplateSidebarView, workbenchView) {
+  formTemplateSidebarView, workbenchView, navView, formBuilderView) {
 
   var AppView = Backbone.View.extend({
 
-    el: "#main-content",
-
-    initialize: function() {
-      // nothing
-    },
+    el: "#app",
 
     events: {
+      "click #create-form": "openFormBuilder"
+    },
 
+    openFormBuilder: function() {
+      new formBuilderView().render();
     },
 
     render: function() {
+      new navView().render();
       new formTemplateSidebarView().render();
-      new workbenchView().render();
       return this;
     }
 

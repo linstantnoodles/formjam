@@ -18,41 +18,11 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body id="app">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div id="primary-nav" class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Form Jam</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Create Form</a></li>
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username  <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Workbench</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
+    <header id="nav">
     </header>
     <div id="main-content" class="wrapper">
         <div class="row">
@@ -60,7 +30,9 @@
                 <!-- form-template-sidebar -->
             </div>
             <div id="right" class=" col-xs-7 col-sm-8 col-md-9 col-lg-9">
-                <!-- workbench-sidebar -->
+                    <!-- workbench-sidebar -->
+                <div class="workbench box">
+                </div><!-- .workbench end-->
             </div>
         </div><!-- .row end -->
     </div><!--wrapper end-->
