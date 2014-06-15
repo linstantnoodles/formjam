@@ -42,7 +42,7 @@ app.use(serveStatic("../client"));
  * Get forms of template
  */
 
-app.get("template/:id/forms", function(req, res) {
+app.get("/template/:id/forms", function(req, res) {
   console.log("foobar");
 });
 
@@ -50,9 +50,14 @@ app.get("template/:id/forms", function(req, res) {
  * Upload image for template
  */
 
-app.post("form/:id/upload", function(req, res) {
+app.post("/form/:id/upload", function(req, res) {
   console.log(req.body);
   console.log(req.files);
+});
+
+app.post("/templates", function(req, res) {
+  console.log(req.body.config);
+  console.log("got yo fucking post");
 });
 
 console.log("Listening to port: " + app.get('port'));
