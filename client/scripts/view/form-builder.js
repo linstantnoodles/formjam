@@ -52,6 +52,8 @@ define([
      */
 
     saveForm: function() {
+      var title = this.$(".form-title input[type=text]").val();
+      this.model.set("title", title);
       this.model.save();
     },
 
