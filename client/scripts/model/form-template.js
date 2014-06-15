@@ -28,8 +28,8 @@ define([
   var FormTemplateModel = Backbone.Model.extend({
 
     defaults: {
-      "title": "Untitled",
-      "config": {
+      title: "Untitled",
+      config: {
         "title": "Untitled",
         "fields": {
         }

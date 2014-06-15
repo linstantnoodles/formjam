@@ -100,6 +100,7 @@ app.get("/templates", function(req, res) {
       res.json(400, {msg: 'Signup failed'});
       return;
     }
+    console.log(results);
     res.json(200, results);
   });
 });
