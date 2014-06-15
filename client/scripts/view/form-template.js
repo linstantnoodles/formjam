@@ -5,8 +5,9 @@ define([
   "jquery",
   "underscore",
   "handlebars",
-  "text!template/form-template.html"
-], function(Backbone, $, _, handlebars, formTemplate) {
+  "text!template/form-template.html",
+  "dropzone"
+], function(Backbone, $, _, handlebars, formTemplate, dropzone) {
 
   var FormTemplateView = Backbone.View.extend({
 
@@ -14,8 +15,27 @@ define([
 
     template: handlebars.compile(formTemplate),
 
+    events: {
+      "click .upload": "uploadFormImage"
+    },
+
+    postInit: function() {
+      var templateId = this.model.get("id");
+      $("#my-awesome-dropzone").dropzone({
+        url: "/form/" + templateId + "/upload"
+      });
+    },
+
+    uploadFormImage: function() {
+      var $file = this.$("input[type=file]");
+      console.log($file.val());
+      // grab the value of the file
+      // post using ajax as multipart
+    },
+
     render: function() {
       this.$el.html(this.template(this.model.attributes));
+      this.postInit();
       return this;
     }
 
