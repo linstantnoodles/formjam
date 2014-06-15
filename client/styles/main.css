@@ -1,3 +1,5 @@
+
+
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
 
 body { background: url(../images/extra_clean_paper.png)repeat;font-weight: 400; color: #777777; font-family: 'Open Sans', sans-serif; }
@@ -8,11 +10,11 @@ color: #19763e;
 text-decoration: none;
 }
 #left{
-margin-left: 5px;
+	margin-left: 5px;
 }
 #right
 {
-margin-left: -10px;
+	margin-left: -10px;
 }
 .navbar { border-top: #53bf6b 4px solid; opacity: .7;}
 .navbar-brand, .navbar-brand:hover { border-top: #53bf6b 4px solid; background: #53bf6b !important; color: white !important; z-index: 9; }
@@ -24,8 +26,8 @@ margin-left: -10px;
 
 .left-sidebar {  height: 600px; }
 .workbench { min-height: 600px; }
-.button { 
-padding: 12px 20px 12px 20px;
+.button, input[type=submit], input#file { 
+	padding: 12px 20px 12px 20px;
 font-size: 11px;
 font-weight: 600;
 text-transform: uppercase;
@@ -52,63 +54,98 @@ line-height: 0px;
 }
 
 
-a.button:hover,
-a.button:focus {
-color: #FFF !important;
-padding: 12px 50px 12px 20px;
-background-color: #53bf6b;
-background-position: 112px 18px;
-text-decoration: none !important;
--moz-box-shadow: inset 0 0 0 0 #CCC;
+a.button:hover, input[type=submit]:hover input#file:hover, input#file:focus
+a.button:focus, input[type=submit]:focus ,input#file  {
+	color: #FFF !important;
+	padding: 12px 50px 12px 20px;
+	background-color: #53bf6b;
+	background-position: 112px 18px;
+	text-decoration: none !important;
+	-moz-box-shadow: inset 0 0 0 0 #CCC;
 -webkit-box-shadow: inset 0 0 0 0 #CCC;
 box-shadow: inset 0 0 0 0 #CCC;
--webkit-transition: all 0.3s;
--moz-transition: all 0.3s;
-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 
 /* Links  */
-a:link, a:visited {
+a:link, a:visited, input[type=submit], input#file {
 color: #3fa757;
 }
 
 
-a.button:link {
+a.button:link, input[type=submit], input#file {
 text-decoration: none;
 }
 
+.add-field, input[type=submit], .upload {
+position: initial;
+line-height: 0px;
+}
 
+.upload { margin-bottom: 20px; display: block;}
 /* Form List */
 
 ul.forms-list {
-margin: 1.5em; 
+	margin: 1.5em; 
 }
 ul.forms-list li {
-list-style: none;
-border-bottom: 1px solid #ccc;
-padding: .2em 0 .2em .5em;
-font-weight: bold;
-color: #666; 
+	list-style: none;
+	border-bottom: 1px solid #ccc;
+	padding: .2em 0 .2em .5em;
+	font-weight: bold;
+	color: #666; 
 }
 ul.forms-list li:hover {
-cursor: pointer;
-background-color: #f2f2f2;
-color: #000; 
+	cursor: pointer;
+	background-color: #f2f2f2;
+	color: #000; 
 }
 
 /* footer */
+footer h3 {
+	color: white;
+}
+footer  {
+	width: 100%;
+	padding-top: 6px;
+	margin-top: 40px;
+	background-color: rgba(81,81,81,0.7);
+}
+
+footer .description p {
+	font-size: 12px;
+	color: #CCC;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
 
 /* team */
 
 ul.team img {
-width: 50px;
-height: autho;
-margin: 0 .5em .5em 0;
+ width: 50px;
+ height: autho;
+ margin: 0 .5em .5em 0;
 }
 
 ul.team li {
-display: block;
-clear: none;
-margin: 0 0 10px 10px;
+	text-transform: capitalize;
+	display: inline;
+	clear: none;
+	padding: 5px 5px 5px 5px;
+	margin: 0 0 10px 10px;
+}
+
+ul.team li a:hover {
+	color: #fff !important;
+}
+
+ul.team li a {
+	color: #fff !important;
+}
+
+div#upload-wrap {
+	display: none;
 }
