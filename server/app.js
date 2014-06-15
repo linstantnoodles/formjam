@@ -57,6 +57,7 @@ app.post("/form/:id/upload", function(req, res) {
 });
 
 app.post("/templates", function(req, res) {
+  console.log(req.body.title);
   var title = req.body.title || "Untitled";
   var config = JSON.stringify(req.body.config);
   conn.query('INSERT INTO template SET ?', {

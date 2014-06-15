@@ -53,7 +53,14 @@ define([
 
     saveForm: function() {
       var title = this.$(".form-title input[type=text]").val();
+      var $inputs = this.$(".fields input");
+      var that = this;
+      $inputs.each(function(i) {
+        var val = $(this).val();
+        that.model.saveInputField(val);
+      });
       this.model.set("title", title);
+      console.log(this.model.attributes)
       this.model.save();
     },
 
