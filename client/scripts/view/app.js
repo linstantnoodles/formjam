@@ -30,14 +30,19 @@ define([
 
     openTemplatePreview: function(e) {
       e.preventDefault();
+      var $link = this.$(e.target);
+      var linkId = $link.data("id");
       // Do a search for the right model
-      new formTemplateView({model: new formTemplateModel()}).render();
+      new formTemplateView({
+        model: this.templateList.get(linkId)
+      }).render();
     },
 
     render: function() {
       new navView().render();
+      this.templateList = new formTemplateCollection();
       new formTemplateSidebarView({
-        collection: new formTemplateCollection()
+        collection: this.templateList
       }).render();
       return this;
     }

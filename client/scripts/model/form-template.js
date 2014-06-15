@@ -48,7 +48,6 @@ define([
       obj["fields"][fieldName]["value"] = 300;
       obj["fields"][fieldName]["value"] = 400;
       this.set("config", obj);
-      console.log(obj);
     },
 
     url: "/templates"
