@@ -44,6 +44,7 @@ define([
       new formTemplateSidebarView({
         collection: this.templateList
       }).render();
+      new formBuilderView({model: new formTemplateModel()}).render();
       return this;
     }
 
