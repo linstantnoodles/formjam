@@ -32,7 +32,7 @@ define([
 
     events: {
       "click .add-field": "addInputField",
-      "click .save-form": "saveForm"
+      "click #save-form": "saveForm"
     },
 
     /**
