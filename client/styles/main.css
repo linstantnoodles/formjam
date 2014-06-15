@@ -151,6 +151,7 @@ div#upload-wrap {
 position: absolute;
 top: 12px;
 left: 475px;
+width: 88px;
 }
 
 .form-control:focus {
