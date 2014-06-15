@@ -30,7 +30,7 @@ define([
         var results = "";
         for (var i = 0; i < keys.length; i++) {
           var labelName = keys[i];
-          results += "<label>" + labelName + "</label>" + "<input type='text' name='val'/>";
+          results += "<label>" + labelName + "</label>" + "<input type='text' name='val' disabled/>";
         }
         return new handlebars.SafeString(results);
       });
