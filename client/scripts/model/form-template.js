@@ -29,25 +29,24 @@ define([
 
     defaults: {
       title: "Untitled",
-      config: {
-        "title": "Untitled",
-        "fields": {
-        }
-      }
+      config: '{"fields":""}'
     },
 
-    saveInputField: function(fieldName) {
-      console.log("Saving input to model");
-      var obj = this.get("config");
-      obj["fields"][fieldName] = {};
-      obj["fields"][fieldName]["type"] = "input";
-      obj["fields"][fieldName]["value"] = "";
-      // Set location values
-      obj["fields"][fieldName]["value"] = 100;
-      obj["fields"][fieldName]["value"] = 200;
-      obj["fields"][fieldName]["value"] = 300;
-      obj["fields"][fieldName]["value"] = 400;
-      this.set("config", obj);
+    convertToJson: function(fieldNames) {
+      var obj = {
+        fields: {}
+      };
+      for (var i = 0; i < fieldNames.length; i++) {
+        obj.fields[fieldNames[i]] = {
+          type: "input",
+          value: "",
+          x: 0,
+          y: 0,
+          h: 0,
+          w: 0
+        };
+      }
+      return obj;
     },
 
     url: "/templates"

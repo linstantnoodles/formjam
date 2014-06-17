@@ -25,9 +25,6 @@ define([
 
     template: handlebars.compile(formBuilderTemplate),
 
-    initialize: function() {
-    },
-
     events: {
       "click .add-field": "addInputField",
       "click #save-form": "saveForm"
@@ -53,11 +50,13 @@ define([
       var title = this.$(".form-title input[type=text]").val();
       var $inputs = this.$(".fields input");
       var that = this;
+      var fields = [];
       $inputs.each(function(i) {
         var val = $(this).val();
-        that.model.saveInputField(val);
+        fields.push(val);
       });
       this.model.set("title", title);
+      this.model.set("config", this.model.convertToJson(fields));
       this.model.save();
     },
 
