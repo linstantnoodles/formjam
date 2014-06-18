@@ -138,6 +138,7 @@ ul.team li {
 	display: inline;
 	clear: none;
 	padding: 5px 5px 5px 5px;
+	width: 155px;
 	margin: 0 0 10px 10px;
 }
 
@@ -233,4 +234,8 @@ padding: 0px;}
 .dz-details {
     margin: auto;
     width: 100px;
+}
+
+ul.team li:nth-child(-n+3) {
+float: left;
 }
